@@ -79,12 +79,12 @@ public class Books {
         this.classify = classify;
     }
 
-    @JSONField(name = "NAUTHOR", ordinal = 5)
+    @JSONField(name = "AUTHOR", ordinal = 5)
     public String getAuthor() {
         return author;
     }
 
-    @JSONField(name = "NAUTHOR", ordinal = 5)
+    @JSONField(name = "AUTHOR", ordinal = 5)
     public void setAuthor(String author) {
         this.author = author;
     }

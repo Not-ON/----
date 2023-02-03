@@ -26,14 +26,16 @@ public class checkServlet extends HttpServlet {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        String jsonString=String.valueOf(JsonUtil.getJson(req));
-        JSONObject jsonObject= JSON.parseObject(jsonString);
-        String choice = jsonObject.getString("CHOICE");
-        String inputContent = jsonObject.getString("CONTENT");
-        try {
-            out.print(s.checkBook(inputContent,choice,userName));
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        while(true){
+            String jsonString=String.valueOf(JsonUtil.getJson(req));
+            JSONObject jsonObject= JSON.parseObject(jsonString);
+            String choice = jsonObject.getString("CHOICE");
+            String inputContent = jsonObject.getString("CONTENT");
+            try {
+                out.print(s.checkBook(inputContent,choice,userName));
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 

@@ -56,12 +56,12 @@ public class BookOfBorrowed {
         this.classify = classify;
     }
 
-    @JSONField(name = "NAUTHOR", ordinal = 4)
+    @JSONField(name = "AUTHOR", ordinal = 4)
     public String getAuthor() {
         return author;
     }
 
-    @JSONField(name = "NAUTHOR", ordinal = 4)
+    @JSONField(name = "AUTHOR", ordinal = 4)
     public void setAuthor(String author) {
         this.author = author;
     }

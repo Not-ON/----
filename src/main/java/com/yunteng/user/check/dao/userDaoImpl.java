@@ -35,7 +35,7 @@ public class userDaoImpl implements userDao {
 
     public List<Books> queryBook1(String classify) throws Exception {
         Connection connection = DBUtil.getConnection();
-        String sql = "Select img,number,bookName,classifyauthor,publisher,date,content,state,count from Library where classify like ?;";
+        String sql = "Select img,number,bookName,classify,author,publisher,date,content,state,count from Library where classify like ?;";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         classify = "%"+ classify + "%";
         preparedStatement.setObject(1, classify);
