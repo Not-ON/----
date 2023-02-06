@@ -18,6 +18,8 @@ public class checkServlet extends HttpServlet {
         /**
          * 传入的数据  查询的关键词 及内容
          */
+        req.setCharacterEncoding("UTF-8");
+        resp.setCharacterEncoding("UTF-8");
         PrintWriter out = resp.getWriter();
         service s = new service();
         String userName = (String) req.getSession().getAttribute("user");
