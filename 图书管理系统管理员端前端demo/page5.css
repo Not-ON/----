@@ -1,0 +1,240 @@
+.chart-choose{
+    display: flex;
+    width: 100%;
+    height: 50px;
+}
+
+.chart-choose button{
+    width: 33.3333%;
+    height: 50px;
+    background:rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    font-weight: 300;
+    color: black;
+    border: none;
+    transition: all .2s;
+    z-index: 1;
+}
+
+.chart-choose .selected{
+    background: #17234b;
+    color: white;
+    opacity: 0.8;
+}
+
+/* chart1 */
+
+.scroll-box {
+    height: 796px;
+    width: 1300px;
+    margin: auto;
+    margin-top: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.scroll-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll-box::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #17234b;
+}
+
+.scroll-box::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.chart1{
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 1200px;
+    height: 1200px;
+}
+
+#container1{
+    background: #17234b;
+    border-radius: 20px;
+}
+
+.name , .number{
+    position: absolute;
+    top: 20px;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.name{
+    left: 50px;
+}
+
+.number{
+    right: 50px;
+}
+
+/* chart2 */
+.chart2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 1400px;
+    height: 750px;
+}
+
+.chart2 h2 {
+    width: 47%;
+    height: 66px;
+    line-height: 66px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    color: black;
+}
+
+.chart2 .chart2-box1{
+    position: relative;
+    background: #17234b;
+    height: 100%;
+    width: 47%;
+    border-radius: 20px;
+}
+
+.past-time{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.chart2 .chart2-box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #17234b;
+    height: 100%;
+    width: 47%;
+    border-radius: 20px;
+}
+
+.chart2 .chart2-box2 .box{
+    display: flex;
+    background: white;
+    height: 40%;
+    width: 90%;
+}
+
+.chart2-box2 .name-list{
+    overflow-y: scroll;
+    width: 30%;
+    height: 100%;
+    font-size: 20px;
+}
+
+.chart2-box2 .name-list p{
+    font-size: 30px;
+    text-align: center;
+    color: black;
+}
+
+.name-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.name-list::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.name-list::-webkit-scrollbar-track {
+    background: #17234b
+}
+
+.chart2-box2 .tiplist{
+    width: 65%;
+    height: 100%;
+    margin-left: 5%;
+}
+
+.chart2-box2 .tiplist h3{
+    color: black;
+    height: 10%;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.chart2-box2 .tiplist .tip{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70%;
+    color: black;
+}
+
+.chart2-box2 .tiplist p{
+    font-size: 18px;
+    height: 40px;
+}
+
+.chart3{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1100px;
+    margin: auto;
+}
+
+.chart3 .list{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: #17234b;
+    height: 240px;
+    width: 500px;
+    margin-top: 30px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+}
+
+.chart3 .list h3{
+    color: white;
+    width: 100%;
+    padding-left: 7.5%;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.chart3 .list p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    color: black;
+    width: 35%;
+    height: 40px;
+    line-height: 40px;
+    background: white;
+}
+
+.chart3 .list .list-name{
+    position: relative;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.bg{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}

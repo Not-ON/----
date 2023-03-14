@@ -1,0 +1,75 @@
+.booklist-search-box {
+    position: relative;
+    top: 60px;
+}
+
+.booklist {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 120px;
+    font-size: 18px;
+}
+
+.booklist tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1200px;
+    height: 45px;
+}
+
+.booklist th,
+.booklist td {
+    width: 140px;
+    height: 35px;
+    line-height: 35px;
+    background: #17234b;
+    color: #FFFFFF;
+    border-radius: 6px;
+}
+
+.booklist th {
+    background: #234199;
+    font-weight: 500;
+}
+
+.booklist .book-name,
+.booklist .book-name-header,
+.booklist .borrow-time,
+.booklist .borrow-time-header{
+    width: 260px;
+}
+
+.booklist .handle,
+.booklist .handle-header{
+    width: 240px;
+}
+
+.booklist .handle {
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+}
+
+.booklist .handle button {
+    width: 100px;
+    background: white;
+    color: #FFFFFF;
+    border: 2px solid #17234b;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+.booklist .handle button:hover {
+    background: #17234b;
+}
+
+.booklist .handle .yes {
+    color: green;
+}
+
+.booklist .handle .no {
+    color: red;
+}
