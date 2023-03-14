@@ -10,9 +10,6 @@ import java.io.PrintWriter;
 public class borrowServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws  IOException {
-        /**
-         * 传入的数据 用户名 书名 数量
-         */
         req.setCharacterEncoding("UTF-8");
         resp.setCharacterEncoding("UTF-8");
         PrintWriter out = resp.getWriter();

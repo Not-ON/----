@@ -15,7 +15,7 @@ public class DBUtil {
                 = new ThreadLocal<>();
 
     static{
-        InputStream ips = DBUtil.class.getClassLoader().getResourceAsStream("E:/Java/BMS/src/main/resources/druid.properties");
+        InputStream ips = DBUtil.class.getClassLoader().getResourceAsStream("druid.properties");
         Properties properties = new Properties();
         try {
             properties.load(ips);

@@ -8,14 +8,7 @@ import java.util.List;
 public interface userDao {
     /**
      * search for book
-     * @param bookName
-     * @return a list of books
-     * @throws SQLException
-     * @throws ClassNotFoundException
-     */
-    public List<Books> queryBook(String bookName) throws Exception;
-    /**
-     * search for book a
+     * 通过分类找书.
      * @param classify
      * @return a list of books-->classify
      * @throws SQLException
@@ -23,37 +16,24 @@ public interface userDao {
      */
     public List<Books> queryBook1(String classify) throws Exception;
     /**
-     *
+     *通过书名找书
      */
     public List<Books> queryBook2(String bookName) throws Exception;
 
     /**
      * search all
+     * 展示全部的书.
      * @return a list of all books
      * @throws SQLException
      * @throws ClassNotFoundException
      */
     public List<Books> queryAll() throws Exception;
-
     /**
-     * adda book into libOfBorrowed. use update().
-     * @param l
-     * @param count
-     * @param borrower
-     * @param date
-     * @param calculate
-     * @return 1->false 2->success
-     * @throws Exception
+     * check if this book is agreed .
+     * 添加数据到borrow_car表中.
+     * @param bookName
+     * @param userName
+     * @return a result of status
      */
-    public int add(List<Books> l, int count, String borrower, String date, String calculate) throws Exception;
-
-    /**
-     * update Library
-     * @param l
-     * @param count00
-     * @return 1->false 2->success
-     * @throws SQLException
-     * @throws ClassNotFoundException
-     */
-    public int update(List<Books> l, int count00) throws Exception;
+    public boolean isArgeed(String bookName,String userName) throws Exception;
 }

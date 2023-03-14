@@ -15,9 +15,6 @@ public class checkServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        /**
-         * 传入的数据  查询的关键词 及内容
-         */
         req.setCharacterEncoding("UTF-8");
         resp.setCharacterEncoding("UTF-8");
         PrintWriter out = resp.getWriter();
@@ -28,6 +25,7 @@ public class checkServlet extends HttpServlet {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+        //循环往复进行.
         while(true){
             String jsonString=String.valueOf(JsonUtil.getJson(req));
             JSONObject jsonObject= JSON.parseObject(jsonString);

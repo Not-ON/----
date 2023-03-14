@@ -7,32 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class userDaoImpl implements userDao {
-
-    @Override
-    public List<Books> queryBook(String bookName) throws Exception {
-        Connection connection = DBUtil.getConnection();
-        String sql = "Select count,number,classify,author from Library where bookName = ?;";
-        PreparedStatement preparedStatement = connection.prepareStatement(sql);
-        preparedStatement.setObject(1, bookName);
-        ResultSet resultSet = preparedStatement.executeQuery();
-        List<Books> l = new ArrayList<>();
-        int count;
-        String number;
-        String classify;
-        String author;
-        count = resultSet.getInt( 1);
-        number = resultSet.getString( 2);
-        classify = resultSet.getString( 3);
-        author = resultSet.getString( 4);
-        Books b = new Books(number,bookName,classify,author,count);
-        l.add(b);
-        preparedStatement.close();
-        if (connection.getAutoCommit()) {
-            DBUtil.freeConnection();
-        }
-        return l;
-    }
-
     public List<Books> queryBook1(String classify) throws Exception {
         Connection connection = DBUtil.getConnection();
         String sql = "Select img,number,bookName,classify,author,publisher,date,content,state,count from Library where classify like ?;";
@@ -152,53 +126,35 @@ public class userDaoImpl implements userDao {
         }
         return l;
     }
-
     @Override
-    public int add(List<Books> l, int count, String borrower, String date, String calculate) throws Exception {
-        if(l.isEmpty()){
-            return 1;
-        }
-        if(1==update(l,count)){
-            return 1;
-        }
-        Books b =l.get(1);
+    public boolean isArgeed(String bookName, String userName) throws Exception {
         Connection connection = DBUtil.getConnection();
-        String sql = "Insert into libOfBorrowed (borrower,count,number,bookName,classify,author,date,state,calculate) values (?,?,?,?,?,?,?,?,?);";
+        String sql = "Select status from borrow_car where user_name = ? and book_name = ? ;";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
-        preparedStatement.setObject(1,borrower);
-        preparedStatement.setObject(2,count);
-        preparedStatement.setObject(3,b.getNumber());
-        preparedStatement.setObject(4,b.getBookName());
-        preparedStatement.setObject(5,b.getClassify());
-        preparedStatement.setObject(6,b.getAuthor());
-        preparedStatement.setObject(7,date);
-        preparedStatement.setObject(8,"等待归还");
-        preparedStatement.setObject(9,calculate);
-        preparedStatement.close();
-        if (connection.getAutoCommit()) {
-            DBUtil.freeConnection();
+        preparedStatement.setObject(1, userName);
+        preparedStatement.setObject(2, bookName);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        resultSet.next();
+        String result = resultSet.getString(1);
+        if(result == "可借阅"){
+            preparedStatement.close();
+            if (connection.getAutoCommit()) {
+                DBUtil.freeConnection();
+            }
+            return true;
         }
-        return 2;
-    }
-
-    @Override
-    public int update(List<Books> l, int count00) throws Exception {
-        Connection connection = DBUtil.getConnection();
-        String sql = "Update Library set count=? where bookName=?;";
-        PreparedStatement preparedStatement = connection.prepareStatement(sql);
-        Books b = l.get(1);
-        int count = b.getCount()-count00;
-        if(count<0){
-            preparedStatement.setObject(1,0);
-            preparedStatement.setObject(2,b.getBookName());
-            return 1;
+        else {
+            sql = "Insert into borrow_car (user_name,book_name,status) values (?,?,?);";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setObject(1, userName);
+            preparedStatement.setObject(2, bookName);
+            preparedStatement.setObject(3,"不可借阅");
+            preparedStatement.executeQuery();
+            preparedStatement.close();
+            if (connection.getAutoCommit()) {
+                DBUtil.freeConnection();
+            }
         }
-        preparedStatement.setObject(1,count);
-        preparedStatement.setObject(2,b.getBookName());
-        preparedStatement.close();
-        if (connection.getAutoCommit()) {
-            DBUtil.freeConnection();
-        }
-        return 2;
+        return false;
     }
 }
