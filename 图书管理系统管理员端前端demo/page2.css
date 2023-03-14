@@ -1,0 +1,147 @@
+.btn-box{
+    display: inline-block;
+    position: relative;
+    height: 80px;
+    width: 200px;
+    margin-left: 80px;
+    margin-top: 60px;
+    color: #666666;
+}
+
+.icon-liebiao{
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+    border: none;
+    background-color: transparent ;
+    color: #666666;
+}
+
+.icon-liebiao:hover{
+    color: black;
+}
+
+.stack-status{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 120px;
+    width:160px;
+}
+
+.stack-status button{
+    height: 40px;
+    width: 160px;
+    background: #666666;
+    border: none;
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+}
+
+.stack-status button:hover{
+    border: white solid 2px;
+}
+
+.stack-status .status-selected{
+    background: #17234b;
+}
+
+.booklist-search-box {
+    position: relative;
+    bottom: 80px;
+}
+
+.sort-box {
+    position: absolute;
+    top: 200px;
+    right: 50px;
+    width: 220px;
+    height: 40px;
+}
+
+.sort-box p{
+    display: none;
+    font-size: 20px;
+    font-weight: 300;
+    color: #666666;
+    letter-spacing: 1px;
+}
+
+.icon-shengjiang {
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    color: #666666;
+}
+
+.icon-shengjiang:hover {
+    color: black;
+}
+
+.booklist{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.booklist tr{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1200px;
+    height: 45px;
+}
+
+.booklist th , .booklist td{
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    background: #17234b;
+    color: #FFFFFF;
+    border-radius: 6px;
+} 
+
+.booklist th {
+    background: #234199;
+    font-weight: 500;
+}
+
+.booklist .book-name{
+    width: 200px;
+}
+
+.booklist .handle{
+    width: 50px;
+}
+
+.booklist .handle-header{
+    width: 50px;
+    visibility: hidden;
+}
+
+.booklist .handle{
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+}
+
+.booklist .handle button{
+    width: 50px;
+    border: solid 2px #234199;
+    border-radius: 6px;
+    background: #FFFFFF;
+    color: #121212;
+    font-size: 16px;
+}
+
+.booklist .borrow-details {
+    width: 1340px;
+    height: 300px;
+    background: #17234b;
+}

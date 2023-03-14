@@ -1,0 +1,80 @@
+.booklist-search-box {
+    position: relative;
+    top: 60px;
+}
+
+.booklist {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 120px;
+    width: 1460px;
+    font-size: 18px;
+}
+
+.booklist tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1460px;
+    height: 45px;
+}
+
+.booklist th,
+.booklist td {
+    width: 90px;
+    height: 35px;
+    line-height: 35px;
+    background: #17234b;
+    color: #FFFFFF;
+    border-radius: 6px;
+}
+
+.booklist th{
+    background: #234199;
+    font-weight: 500;
+}
+
+.booklist .book-name,
+.booklist .book-name-header,
+.booklist .borrow-time,
+.booklist .borrow-time-header,
+.booklist .return-time,
+.booklist .return-time-header {
+    width: 220px;
+}
+
+.booklist .handle,
+.booklist .handle-header {
+    width: 180px;
+}
+
+.booklist .handle {
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+}
+
+.booklist .handle button {
+    width: 80px;
+    background: white;
+    color: #FFFFFF;
+    font-size: 16px;
+    border: solid 2px #17234b;
+    border-radius: 6px;
+}
+
+.booklist .handle button:hover {
+    background: #17234b;
+}
+
+.booklist .handle .yes,
+.booklist .handle .situation-good{
+    color: green;
+}
+
+.booklist .handle .no ,
+.booklist .handle .situation-bad{
+    color: red;
+}
