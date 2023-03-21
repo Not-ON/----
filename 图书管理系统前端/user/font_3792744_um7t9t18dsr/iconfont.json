@@ -1,0 +1,93 @@
+{
+  "id": "3792744",
+  "name": "云顶",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "900070",
+      "name": "借呗",
+      "font_class": "jiebei",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "9749399",
+      "name": "图书归还",
+      "font_class": "manage-the-return-of-books",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "15726894",
+      "name": "审批审核",
+      "font_class": "shenpishenhe",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "10555135",
+      "name": "个人主页",
+      "font_class": "gerenzhuye",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "11833541",
+      "name": "退出",
+      "font_class": "tuichu",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "7594083",
+      "name": "24gl-repeat2",
+      "font_class": "24gl-repeat2",
+      "unicode": "ea75",
+      "unicode_decimal": 60021
+    },
+    {
+      "icon_id": "10392614",
+      "name": "登录",
+      "font_class": "denglu",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "1131",
+      "name": "资料库",
+      "font_class": "ziliaoku",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "1296917",
+      "name": "2首页2",
+      "font_class": "2shouye2",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "8094173",
+      "name": "查看",
+      "font_class": "chakan",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "5013",
+      "name": "列表",
+      "font_class": "liebiao",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "2076426",
+      "name": "搜索小",
+      "font_class": "sousuoxiao",
+      "unicode": "e8d6",
+      "unicode_decimal": 59606
+    }
+  ]
+}

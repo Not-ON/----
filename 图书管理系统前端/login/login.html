@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <meta charset="GBK" /> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登录-图书管理系统-云腾</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="shortcut icon"
+      href="https://bucketimage0.oss-cn-beijing.aliyuncs.com/logo1(3)%202.png"
+    />
+  </head>
+  <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.27.2/axios.min.js"></script>
+  <body>
+    <div class="big">
+      <div class="login">
+        <!-- 主体内容 -->
+        <div class="toptext">图书管理系统</div>
+        <!-- 列表部分 -->
+        <div class="login-">
+          <input
+            class="login--"
+            name="loginemail"
+            type="email"
+            placeholder="请输入邮箱号"
+            onblur="loginemail()"
+          />
+          <span id="error1">邮箱格式错误!</span>
+          <input
+            class="login--"
+            name="loginpassword"
+            type="password"
+            placeholder="请输入只能由字母、数字组成的8位密码"
+            maxlength="8"
+            onKeyUp="value=value.replace(/[\W]/g,'')"
+          />
+        </div>
+        <!-- 按钮 -->
+        <div class="but">
+          <button class="buts" onclick="login0()">登录</button>
+
+          <button class="buts" onclick="jump()">注册新用户</button>
+        </div>
+        <div class="wang">
+          <a class="wangji" href="">忘记密码</a>
+        </div>
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>

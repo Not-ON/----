@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹出框</title>
+</head>
+<body>
+    <div class="wrap">
+        <input type="text" id="demo">
+        <ul id="newsBox">
+        </ul>
+    </div>
+        <script>
+    function creat() {
+        var value = input.value;
+        var html = "";
+        let arrnew = data.map((item, index) => {
+            return Object.assign({}, {
+                'desc': item.desc,
+            })
+        })
+
+        var newData = arrnew.filter(item => {
+            if (item.desc.indexOf(value) > -1) { //indexOf方法中如果xxx.indexOf("")返回值为0
+                return item
+            }
+            return newData
+        })
+
+
+        if (newData.length > 0) {
+            for (var i = 0; i < newData.length; i++) {
+                html += `<li>${newData[i].desc}</li>`
+            }
+        } else {
+            html += `<li>暂无数据</li>`
+        }
+        ul.innerHTML = html;
+    }
+    creat()
+    input.onchange = function (e) {
+        creat()
+    }
+        </script>
+</body>
+</html>

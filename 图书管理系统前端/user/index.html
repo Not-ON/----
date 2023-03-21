@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书管理系统</title>
+    <link rel="stylesheet" href="./font_3792744_um7t9t18dsr/iconfont.css">
+    <link rel="stylesheet" href="./index.css">
+    <script defer src="./index.js"> </script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.3.4/axios.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>图书管理系统用户端</h1>
+        <div class="title_text">
+            <div class="text01">
+                请爱护书刊资料，在规定日期内归还,切勿损坏图书
+            </div>
+        </div>
+        <div id="symbol" class="symbol">
+            <div class="my-account">
+                <div class="iconfont icon-denglu"></div>
+                <a class="my">我的账号</a>
+            </div>
+            <div id="login" class="login">
+                <a id="quit-login" href="../login/login.html">
+                    <span class="iconfont icon-tuichu"></span>
+                    <span class="word">退出登录</span>
+                </a>
+                <!-- <a id="change-login">
+                    <span class="iconfont icon-24gl-repeat2"></span>
+                    <span class="word">切换账号</span>
+                </a> -->
+            </div>
+        </div>
+    </header>
+    <aside>
+        <div class="logo-name">
+            YUN TENG
+        </div>
+        <div class="aside-logo-box">
+            <img class="aside-logo" src="https://xirealm.oss-cn-beijing.aliyuncs.com/xi/logo1(3).png" alt="">
+        </div>
+        <div class="menu" id="aside-menu">
+            <a class="selected" href="./index.html">
+                <div class="menu-content">系统首页</div>
+                <div class="iconfont icon-2shouye2"></div>
+            </a>
+            <a>
+                <div class="menu-content">查看书库</div>
+                <div class="iconfont icon-ziliaoku"></div>
+            </a>
+            <a>
+                <div class="menu-content">我的借阅</div>
+                <div class="iconfont icon-chakan"></div>
+            </a>
+            <a>
+                <div class="menu-content">个人中心</div>
+                <div class="iconfont icon-gerenzhuye"></div>
+            </a>
+        </div>
+    </aside>
+    <main>
+        <div class="show" id="show1">
+            <h1 class="show01_text1">图书管理系统欢迎您</h1>
+            <div class="show01_text2">Library management system welcome you</div>
+            <div class="show01_content">
+                <div class="show_content_box">
+                    <div class="recommend">
+                        <h1 class="recommend_text">为您推荐</h1>
+                        <div class="recommend_content">
+                            <div class="book1"></div>
+                            <div class="book2"></div>
+                            <div class="book5"></div>
+                            <div class="book4"></div>
+                            <div class="book3"></div>
+                        </div>
+                    </div>
+                    <div class="leaderboard">
+                        <h1 class="leaderboard_text">借阅排行榜</h1>
+                        <div class="leaderboard_content">
+                            <div>
+                                <p>1. 明朝那些事</p>
+                                <p>2. 我们仨</p>
+                                <p>3. 月亮与六便士3</p>
+                                <p>4. 白鹿原</p>
+                                <p>5. 平凡的世界</p>
+                            </div>
+                            <div>
+                                <p>6. 三体</p>
+                                <p>7. 活着</p>
+                                <p>8. 牵风记</p>
+                                <p>9. 围城</p>
+                                <p>10. 繁花</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="allusion">
+                    <h1 class="allusion_text">每日一言</h1>
+                    <div class="allusion_content">
+                        <div class="allusion_content_box">
+                                <div class="allusion_show">
+                                <div class="date">
+                                    <div style="font-size: 80px;">21</div>
+                                    <div>2023.03 星期二</div>
+                                </div>
+                                <div class="saying-box">
+                                    <div class="saying">我读书越多，书籍就使我和世界越接近，生活对我也变得越加光明和有意义。</div>
+                                    <div class="saying-author">—— 高尔基</div>
+                                </div>
+                            </div>
+                            <div class="allusion_show">
+                                <div class="date">
+                                    <div style="font-size: 80px;">21</div>
+                                    <div>2023.03 星期二</div>
+                                </div>
+                                <div class="saying-box">
+                                    <div class="saying">我读书越多，书籍就使我和世界越接近，生活对我也变得越加光明和有意义。</div>
+                                    <div class="saying-author">—— 高尔基</div>
+                                </div>
+                            </div>
+                            <div class="allusion_show">
+                                <div class="date">
+                                    <div style="font-size: 80px;">21</div>
+                                    <div>2023.03 星期二</div>
+                                </div>
+                                <div class="saying-box">
+                                    <div class="saying">我读书越多，书籍就使我和世界越接近，生活对我也变得越加光明和有意义。</div>
+                                    <div class="saying-author">—— 高尔基</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="show" id="show2">
+            <div class="show02_box1">
+                <div id="classification">
+                    <div class="classification-text">
+                        <div class="iconfont icon-liebiao"></div>
+                        <span>作品分类</span>
+                    </div>
+                    <div class="nev">
+                        <button>哲学类</button>
+                        <button>社会科学类</button>
+                        <button>政治类</button>
+                        <button>军事类</button>
+                        <button>文化类</button>
+                        <button>体育类</button>
+                    </div>
+                </div>
+                <div class="search" id="search-book">
+                    <input type="text" placeholder="书名/作者名">
+                    <div class="search-logo-box">
+                        <div class="iconfont icon-sousuoxiao"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="show02_box2">
+                <div class="book-list"></div>
+                <div class="pagination-container">
+                    <span class="page-change prev">上一页</span>
+                    <div class="pagination"></div>
+                    <span class="page-change next">下一页</span>
+                </div>
+            </div>
+        </div>
+        <div class="show" id="show3">
+            <div class="search" id="search-borrow">
+                <input type="text" placeholder="请输入书名">
+                <div class="search-logo-box">
+                    <div class="iconfont icon-sousuoxiao"></div>
+                </div>
+            </div>
+            <table class="my-borrow">
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>图书名称</th>
+                        <th>图书编号</th>
+                        <th>图书类型</th>
+                        <th>作者</th>
+                        <th class="time-header">借阅时间</th>
+                        <th class="time-header">归还时间</th>
+                        <th class="state-header">状态</th>
+                        <th class="handle-header">操作</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="pagination-container" id="pagination2" >
+                <span class="page-change prev">上一页</span>
+                <div class="pagination"></div>
+                <span class="page-change next">下一页</span>
+            </div>
+        </div>
+        <div class="show" id="show4">
+            <div class="show04_content">
+                <div class="show04_content1">
+                    <div class="information">
+                        <img class="information_photo" src="https://donghehe.oss-cn-hangzhou.aliyuncs.com/d912057f77bbdb90ab71a96bdd5614b5.png"></img>
+                        <input type="file" class="photo-file">
+                        <button class="edit-photo">编辑头像</button>
+                        <div class="information_content">
+                            <div class="user">
+                                <input id="user-name" class="user-name" value="自律自由"></input>
+                                <div class="button-box">
+                                    <div class="user_content">详情</div>
+                                    <button class="change">修改个人信息</button>
+                                </div>
+                            </div>
+                            <hr>
+                            <div>
+                                <p>姓名</p>
+                                <input type="text" id="name" value="倪益波">
+                            </div>
+                            <div>
+                                <p>期数</p>
+                                <input type="text" id="periods" value="七期">
+                            </div>
+                            <div>
+                                <p>方向</p>
+                                <input type="text" id="direaction" value="设计">
+                            </div>
+                            <div>
+                                <p>邮箱号</p>
+                                <input type="text" id="email" value="2917864860@qq.com">
+                            </div>
+                            <div>
+                                <p>ip属地</p>
+                                <input type="text" id="ip" value="山西">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="form" class="form">
+                        <div>用户图书借阅走势图</div>
+                        <div id="form1" class="form1"></div>
+                    </div>
+                </div>
+                <div class="show04_content2">
+                    <div class="tasks">
+                        <div class="task">
+                            <div class="task_text">
+                                <p class="state">借阅中</p>
+                                <p class="number" id="borrowing-number">4</p>
+                            </div>
+                            <div class="iconfont icon-jiebei"></div>
+                        </div>
+                        <div class="task">
+                            <div class="task_text">
+                                <p class="state">等待审核</p>
+                                <p class="number" id="waitting-number">2</p>
+                            </div>
+                            <div class="iconfont icon-shenpishenhe"></div>
+                        </div>
+                        <div class="task">
+                            <div class="task_text">
+                                <p class="state">已归还</p>
+                                <p class="number" id="borrowed-number">28</p>
+                            </div>
+                            <div class="iconfont icon-manage-the-return-of-books"></div>
+                        </div>
+                    </div>
+                    <div id="form2" class="form2"></div>
+                </div>
+            </div>
+             
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page2</title>
+    <link rel="stylesheet" href="./default.css">
+    <link rel="stylesheet" href="./font_3878111_xpok9ljegko/iconfont.css">
+    <link rel="stylesheet" href="./page2.css">
+</head>
+
+<body>
+    <header>
+        <h1>图书管理系统后台</h1>
+        <div class="banner-tips" id="banner-tips"></div>
+        <div class="header-box">
+            <div class="admin">
+                <span class="iconfont icon-denglu"></span>
+                <div>admin</div>
+            </div>
+            <a class="return-login" href="#">返回登录页</a>
+        </div>
+    </header>
+    <aside>
+        <div class="logo-name">
+            YUN TENG
+        </div>
+        <div class="aside-logo-box">
+            <img class="aside-logo" src="./photo/yuntengLogo.png" alt="">
+        </div>
+        <div class="menu" id="aside-menu">
+            <a href="./index.html">
+                <div class="menu-content">系统首页</div>
+                <div class="iconfont icon-shouye"></div>
+            </a>
+            <a href="./page1.html">
+                <div class="menu-content">书库管理</div>
+                <div class="iconfont icon-ziliaoku"></div>
+            </a>
+            <a class="selected" href="./page2.html">
+                <div class="menu-content">借阅查看</div>
+                <div class="iconfont icon-chakan"></div>
+            </a>
+            <a href="./page3.html">
+                <div class="menu-content">借阅审批</div>
+                <div class="iconfont icon-shenpi">
+                    <div class="new-msg"></div>
+                </div>
+            </a>
+            <a href="./page4.html">
+                <div class="menu-content">归还审批</div>
+                <div class="iconfont icon-kufangguanli-lingyongguihuan">
+                    <div class="new-msg"></div>
+                </div>
+            </a>
+            <a href="./page5.html">
+                <div class="menu-content">借阅数据</div>
+                <div class="iconfont icon-shuzhuangtu"></div>
+            </a>
+        </div>
+    </aside>
+    <main>
+        <div class="btn-box">
+            <button id="btn-stack-status" class="iconfont icon-liebiao"></button>
+            <div class="stack-status" id="stack-status">
+                <button id="stack-all" class="status-selected" disabled>全部</button>
+                <button id="stack-full">有库存</button>
+                <button id="stack-empty">无库存</button>
+            </div>
+        </div>
+        <div class="booklist-search-box">
+            <input type="text" class="booklist-search-input" placeholder="图书名称/作者/编号">
+            <div class="iconfont icon-sousuo" id="booklist-search"></div>
+        </div>
+        <div class="sort-box" id="sort-box">
+            <p style = "display: inline;">按照书籍编号排序</p>
+            <p>按照库存数量排序</p>
+            <p>按照借阅人数排序</p>
+            <button class="iconfont icon-shengjiang"></button>
+        </div>
+        <a class="return-top" href="#">回到顶部</a>
+        <table class="booklist wrapper">
+            <thead>
+                <tr>
+                    <th>书籍编号</th>
+                    <th class="book-name">书籍名称</th>
+                    <th>作者</th>
+                    <th>书籍类型</th>
+                    <th>库存数量</th>
+                    <th>借阅数量</th>
+                    <th class="handle-header"></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        </main>
+    </main>
+    <script src="./defalut.js"></script>
+    <script src="./page2.js"></script>
+</body>
+</html>

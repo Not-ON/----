@@ -1,0 +1,391 @@
+.btn-box{
+    display: inline-block;
+    height: 80px;
+    width: 300px;
+    margin-left: 80px;
+    margin-top: 60px;
+    color: #666666;
+    font-weight: 300;
+}
+
+.book-increase-box , .booklist-to-xlsx-box{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 20px;
+    height: 40px;
+}
+
+.icon-tianjia1 , .icon-daochu2{
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+    border: none;
+    background-color: transparent ;
+    color: #666666;
+}
+
+.icon-tianjia1:hover , .icon-daochu2:hover{
+    color: black;
+}
+
+.icon-daochu2{
+    font-size: 28px;
+}
+
+.booklist-search-box {
+    position: relative;
+    bottom: 80px;
+}
+
+.booklist{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.booklist tr{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1200px;
+    height: 45px;
+}
+
+.booklist th , .booklist td{
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    background: #17234b;
+    color: #FFFFFF;
+    border-radius: 6px;
+} 
+
+.booklist th {
+    background: #234199;
+    font-weight: 500;
+}
+
+.booklist .book-name,
+.booklist .book-name-header{
+    width: 200px;
+}
+
+.booklist .handle-header , .booklist .handle{
+    width: 280px;
+}
+
+.booklist .handle{
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+}
+
+.booklist .handle button{
+    width: 120px;
+    background: white;
+    border-radius: 6px;
+    border: solid 2px #17234b;
+    font-size: 18px;
+}
+
+.booklist .handle button:hover{
+    background: #17234b;
+}
+
+.edit{
+    color: #328300;
+}
+
+.delete{
+    color: #F60000;
+}
+
+.book-edit{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    height: 460px;
+    background: #17234b;
+    border: #A6A6A6 solid 2px;
+    border-radius: 6px;
+    font-size: 20px;
+}
+
+.book-edit h2{
+    width: 100%;
+    height:40px;
+    line-height: 40px;
+    color: white;
+    text-align: left;
+    font-weight: 300;
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+.book-edit .book-cover-box{
+    margin-left: 30px;
+    height: 400px;
+}
+
+.book-edit .book-cover-edit-btn {
+    position: relative;
+    bottom: 5px;
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    font-size: 30px;
+    border: none;
+    color: #666666;
+}
+
+.book-edit .book-cover-edit-btn:hover {
+    color: white;
+}
+
+.book-edit .book-cover-edit {
+    display: none;
+}
+
+.book-edit form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 800px;
+    height: 410px;
+    margin-left: 10px;
+}
+
+.book-edit .input-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.book-edit label{
+    font-size: 20px;
+    color: #979797;
+}
+
+.book-edit input {
+    background: #D4D4D4;
+    width: 670px;
+    border: hidden;
+    border-bottom: 1px solid #737373;
+    color: black;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.book-edit input:focus {
+    outline: none;
+}
+
+.book-edit .input-introduction{
+    height: 100px;
+    width: 670px;
+    resize: none;
+    overflow-y: hidden;
+    background: #D4D4D4;
+    border: hidden;
+    border-bottom: 1px solid #737373;
+    color: black;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: "微软雅黑";
+}
+
+.book-edit .input-introduction{
+    outline: none;
+}
+
+.book-edit .book-details-btn-box{
+    display: flex;
+    justify-content: right;
+    margin-bottom: 10px;
+}
+
+.book-edit .edit-finish{
+    background: #1C4A00;
+    border-radius: 4px;
+    width: 90px;
+    height: 30px;
+    color: #CBCBCB;
+    font-size: 18px;
+    line-height: 30px;
+    margin-right: 20px;
+    border: none;
+}
+
+.book-edit .edit-cancel{
+    background: #750000;
+    border-radius: 4px;
+    width: 90px;
+    height: 30px;
+    color: #CBCBCB;
+    font-size: 18px;
+    line-height: 30px;
+    border: none;
+}
+
+/* 弹窗展示书籍添加栏 */
+.mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0 ,0.6);
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+}
+
+.book-increase{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 280px;
+    margin-top: 220px;
+    width: 1200px;
+    height: 470px;
+    background: #17234b;
+    border: #A6A6A6 solid 2px;
+    border-radius: 6px;
+    font-size: 20px;
+}
+
+.book-increase h2{
+    height:36px;
+    width: 100%;
+    line-height: 36px;
+    color: white;
+    text-align: left;
+    font-weight: 300;
+    font-size: 22px;
+    padding-left: 30px;
+}
+
+.book-increase .book-cover-box{
+    position: relative;
+    margin-left: 30px;
+    height: 400px;
+    width: 300px;
+}
+
+.book-increase .book-cover{
+    width: 300px;
+    background: #D4D4D4;
+}
+
+.book-increase .book-cover-upload-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 40px;
+    width: 80px;
+    background: transparent;
+    font-size: 20px;
+    border: none;
+    color: #666666;
+}
+
+.book-increase .book-cover-upload-btn:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.book-increase .book-cover-upload {
+    display: none;
+}
+
+.book-increase form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 750px;
+    height: 410px;
+    margin-left: 60px;
+}
+
+.book-increase .input-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.book-increase label{
+    font-size: 20px;
+    color: #979797;
+}
+
+.book-increase form input {
+    background: #D4D4D4;
+    width: 250px;
+    border: hidden;
+    border-bottom: 1px solid #737373;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.book-increase input:focus {
+    outline: none;
+}
+
+/* 书籍添加简介栏 */
+.book-increase .input-introduction{
+    height: 100px;
+    width: 650px;
+    margin-left: 20px;
+    resize: none;
+    overflow-y: hidden;
+    background: #D4D4D4;
+    border: hidden;
+    border-bottom: 1px solid #737373;
+    color: black;
+    font-size: 18px;
+    font-family: "微软雅黑";
+}
+
+.book-increase .input-location{
+    width: 650px;
+    margin-left: 20px;
+}
+
+.book-increase .input-introduction{
+    outline: none;
+}
+
+.book-increase .modal-btn-box{
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+
+.book-increase .increase-finish{
+    background: #1C4A00;
+    border-radius: 4px;
+    width: 90px;
+    height: 30px;
+    color: #CBCBCB;
+    font-size: 18px;
+    line-height: 30px;
+    margin-right: 20px;
+    border: none;
+}
+
+.book-increase .increase-cancel{
+    background: #750000;
+    border-radius: 4px;
+    width: 90px;
+    height: 30px;
+    color: #CBCBCB;
+    font-size: 18px;
+    line-height: 30px;
+    border: none;
+}

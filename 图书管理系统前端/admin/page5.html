@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page5</title>
+</head>
+<link rel="stylesheet" href="./default.css">
+<link rel="stylesheet" href="./font_3878111_xpok9ljegko/iconfont.css">
+<link rel="stylesheet" href="./page5.css">
+<body>
+    <header>
+        <h1>图书管理系统后台</h1>
+        <div class="banner-tips" id="banner-tips"></div>
+        <div class="header-box">
+            <div class="admin">
+                <span class="iconfont icon-denglu"></span>
+                <div>admin</div>
+            </div>
+            <a class="return-login" href="#">返回登录页</a>
+        </div>
+    </header>
+    <aside>
+        <div class="logo-name">
+            YUN TENG
+        </div>
+        <div class="aside-logo-box">
+            <img class="aside-logo" src="./photo/yuntengLogo.png" alt="">
+        </div>
+        <div class="menu" id="aside-menu">
+            <a href="./index.html">
+                <div class="menu-content">系统首页</div>
+                <div class="iconfont icon-shouye"></div>
+            </a>
+            <a href="./page1.html">
+                <div class="menu-content">书库管理</div>
+                <div class="iconfont icon-ziliaoku"></div>
+            </a>
+            <a href="./page2.html">
+                <div class="menu-content">借阅查看</div>
+                <div class="iconfont icon-chakan"></div>
+            </a>
+            <a href="./page3.html">
+                <div class="menu-content">借阅审批</div>
+                <div class="iconfont icon-shenpi">
+                    <div class="new-msg"></div>
+                </div>
+            </a>
+            <a href="./page4.html">
+                <div class="menu-content">归还审批</div>
+                <div class="iconfont icon-kufangguanli-lingyongguihuan">
+                    <div class="new-msg"></div>
+                </div>
+            </a>
+            <a class="selected" href="./page5.html">
+                <div class="menu-content">借阅数据</div>
+                <div class="iconfont icon-shuzhuangtu"></div>
+            </a>
+        </div>
+    </aside>
+    <main>
+        <div class="chart-choose" id="chart-choose">
+            <button class="selected">书籍借阅次数（热度）排名</button>
+            <button>借阅黑名单</button>
+            <button>各类书籍借阅排名</button>
+        </div>
+        <form></form>
+    </main>
+    <script src="./defalut.js"></script>
+    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+    <script src="./page5.js"></script>
+</body>
+</html>

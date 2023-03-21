@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3792744 */
+  src: url('iconfont.woff2?t=1679311128920') format('woff2'),
+       url('iconfont.woff?t=1679311128920') format('woff'),
+       url('iconfont.ttf?t=1679311128920') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jiebei:before {
+  content: "\e631";
+  color: chocolate;
+  font-size: 45px;
+}
+
+.icon-manage-the-return-of-books:before {
+  content: "\e609";
+  color:dodgerblue;
+  font-size: 55px;
+}
+
+.icon-shenpishenhe:before {
+  content: "\e633";
+  color: green;
+  font-size: 55px;
+}
+
+.icon-gerenzhuye:before {
+  content: "\e63b";
+}
+
+.icon-tuichu:before {
+  content: "\e60d";
+}
+
+.icon-24gl-repeat2:before {
+  content: "\ea75";
+}
+.icon-denglu:before {
+  content: "\e604";
+  font-size: 50px;
+}
+
+.icon-ziliaoku:before {
+  content: "\e601";
+}
+
+.icon-2shouye2:before {
+  content: "\e653";
+}
+
+.icon-chakan:before {
+  content: "\e642";
+}
+
+.icon-liebiao:before {
+  content: "\e600";
+}
+
+.icon-sousuoxiao:before {
+  content: "\e8d6";
+  font-size: 30px;
+}
+

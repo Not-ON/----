@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>注册-图书管理系统-云腾</title>
+    <link rel="stylesheet" href="register.css" />
+    <link
+      rel="shortcut icon"
+      href="https://bucketimage0.oss-cn-beijing.aliyuncs.com/logo1(3)%202.png"
+    />
+  </head>
+  <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.27.2/axios.min.js"></script>
+  <body>
+    <div class="bigbox">
+      <div class="register">
+        <div class="toptext--">图书管理系统</div>
+        <div class="registerrr">
+          <input class="register-" type="text" placeholder="姓名" />
+          <input
+            class="register-"
+            type="email"
+            placeholder="邮箱号"
+            onblur="registeremail()"
+          />
+          <span id="error1">邮箱格式错误!</span>
+          <select class="register-" name="dir">
+            <option value="" disabled selected hidden>方向</option>
+            <option value="开发">开发</option>
+            <option value="设计">设计</option>
+            <option value="秘书处">秘书处</option>
+          </select>
+          <select class="register-" name="number">
+            <option value="" disabled selected hidden>期数</option>
+            <option value="七期">七期</option>
+            <option value="六期">六期</option>
+            <option value="五期">五期</option>
+          </select>
+          <input
+            type="password"
+            placeholder="请输入只能由字母、数字组成的8位密码"
+            maxlength="8"
+            onKeyUp="value=value.replace(/[\W]/g,'')"
+            class="register--"
+          />
+          <input type="text" placeholder="请输入邀请码" class="register--" />
+          <button class="buts" onclick="register0()">注册</button>
+        </div>
+      </div>
+      <div id="tanchaung"></div>
+    </div>
+    <script src="register.js"></script>
+  </body>
+</html>

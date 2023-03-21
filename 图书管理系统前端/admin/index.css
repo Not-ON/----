@@ -1,0 +1,65 @@
+.chart-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 1480px;
+}
+
+.chart1,.chart2,.chart3,.chart4{
+    display: inline-block;
+    position: relative;
+    height: 430px;
+    width: 740px;
+}
+
+h2{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 25px;
+    width: 200px;
+    color: black;
+}
+
+.container4{
+    height: 400px;
+    width: 500px;
+    margin-top: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+}
+
+.grade1,.grade2,.grade3,.grade4{
+    text-align: center;
+    width: 500px;
+    height: 50px;
+    line-height: 50px;
+    letter-spacing: 2px;
+}
+
+.grade1{
+    font-size: 32px;
+    color: rgb(0, 0, 0);
+}
+
+.grade2{
+    font-size: 28px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.grade3{
+    font-size: 24px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.grade4{
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.4);
+}
